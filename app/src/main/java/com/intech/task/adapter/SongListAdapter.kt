@@ -31,7 +31,6 @@ class SongListAdapter: RecyclerView.Adapter<SongListAdapter.ViewHolder>() {
         return detailSongList
     }
 
-
     inner class ViewHolder(private val binding: ItemSongBinding): RecyclerView.ViewHolder(binding.root) {
 
         fun bind(detailSong: Result) {
