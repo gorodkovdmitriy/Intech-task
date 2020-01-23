@@ -26,6 +26,8 @@ class PlayerViewModel(bundle: Bundle) : ViewModel() {
     val playerReadyLiveData = MutableLiveData<SimpleExoPlayer>()
     val detailSongLiveData = MutableLiveData<Result>()
 
+    private val NOTIFICATION_CHANNEL_ID = "player"
+    private val NOTIFICATION_ID = 123
     private var player: SimpleExoPlayer? = null
     private var playerNotificationManager: PlayerNotificationManager? = null
 
@@ -60,8 +62,8 @@ class PlayerViewModel(bundle: Bundle) : ViewModel() {
         // Настраиваем уведомление
        playerNotificationManager = PlayerNotificationManager(
            applicationContext,
-           "player",
-           123,
+           NOTIFICATION_CHANNEL_ID,
+           NOTIFICATION_ID,
            getDescriptionAdapter(detailSong))
 
         playerNotificationManager?.setPlayer(player)
