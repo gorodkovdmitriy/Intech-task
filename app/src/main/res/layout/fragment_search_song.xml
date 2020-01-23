@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="viewModel"
+            type="com.intech.task.ui.search_song.SearchSongViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar_with_search_view"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/song_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?attr/actionBarSize"/>
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyleHorizontal"
+            app:layout_constraintEnd_toEndOf="@+id/song_recycle_view"
+            app:layout_constraintStart_toStartOf="@+id/song_recycle_view"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:visibility="@{(viewModel.isLoading == false) ? View.GONE : View.VISIBLE}"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

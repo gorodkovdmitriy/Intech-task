@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_song_fragment"
+    app:startDestination="@id/search_song_fragment">
+
+    <fragment
+        android:id="@+id/player_fragment"
+        android:name="com.intech.task.ui.music_player.PlayerFragment"
+        android:label="player_fragment"
+        tools:layout="@layout/player_fragment" />
+    <fragment
+        android:id="@+id/search_song_fragment"
+        android:name="com.intech.task.ui.search_song.SearchSongFragment"
+        android:label="SearchSongFragment" >
+        <action
+            android:id="@+id/action_searchSongFragment_to_player_fragment"
+            app:destination="@id/player_fragment" />
+    </fragment>
+
+</navigation>

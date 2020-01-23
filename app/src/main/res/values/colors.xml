@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="background">#F1F1F1</color>
+    <color name="scrubber_color">#797979</color>
+    <color name="unplayed_color">#ACACAC</color>
+    <color name="played_color">#797979</color>
+    <color name="buffered_color">#999999</color>
+</resources>
